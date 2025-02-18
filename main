@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio | Static Equipment Inspector Engineer</title>
+   <link rel="stylesheet" href="styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+       <div class="container">
+           <h1>Static Equipment Inspector Engineer</h1>
+           <p>Expert in Inspection and Maintenance of Static Equipment</p>
+       </div>
+   </header>
+ 
+   <section id="about">
+       <div class="container">
+           <h2>About Me</h2>
+           <p>I am a Static Equipment Inspector Engineer with extensive experience in the oil, gas, and chemical industries. My expertise includes inspection, maintenance, risk assessment, and ensuring compliance with API, ASME, and Shell standards.</p>
+       </div>
+   </section>
+ 
+   <section id="skills">
+       <div class="container">
+           <h2>Skills and Competencies</h2>
+           <ul>
+               <li>Inspection of Static Equipment (API 510, API 570, API 653)</li>
+               <li>Non-Destructive Testing (UT, MT, PT, PAUT, TOFD)</li>
+               <li>Fitness-for-Service Evaluation (API 579)</li>
+               <li>Risk-Based Inspection Planning (API 580, API 581)</li>
+               <li>Equipment Integrity Management (PCMS, w-IMS)</li>
+               <li>Welding and Material Control (API 577, API 578)</li>
+               <li>Safety Assurance (HSE, PTW, ALARP)</li>
+           </ul>
+       </div>
+   </section>
+ 
+   <section id="experience">
+       <div class="container">
+           <h2>Work Experience</h2>
+           <div class="job">
+               <h3>Static Equipment Inspector Engineer</h3>
+               <p><strong>Company:</strong> [Company Name]</p>
+               <p><strong>Period:</strong> [Years of Work]</p>
+               <p><strong>Responsibilities:</strong> Conducting inspections, developing RBI plans, managing equipment integrity, participating in maintenance projects.</p>
+           </div>
+           <div class="job">
+               <h3>Non-Destructive Testing Specialist</h3>
+               <p><strong>Company:</strong> [Company Name]</p>
+               <p><strong>Period:</strong> [Years of Work]</p>
+               <p><strong>Responsibilities:</strong> Performing NDT, analyzing results, preparing reports.</p>
+           </div>
+       </div>
+   </section>
+ 
+   <section id="certifications">
+       <div class="container">
+           <h2>Certifications</h2>
+           <ul>
+               <li>API 510 — Pressure Vessel Inspector</li>
+               <li>API 570 — Piping Inspector</li>
+               <li>API 653 — Tank Inspector</li>
+               <li>ASME IX — Welding</li>
+               <li>HUET, CA-EBS — Offshore Safety</li>
+           </ul>
+       </div>
+   </section>
+ 
+   <section id="contact">
+       <div class="container">
+           <h2>Contact</h2>
+           <p><strong>Email:</strong> [Your Email]</p>
+           <p><strong>Phone:</strong> [Your Phone]</p>
+           <p><strong>LinkedIn:</strong> <a href="[Your LinkedIn Profile]">My LinkedIn Profile</a></p>
+       </div>
+   </section>
+ 
+   <footer>
+       <div class="container">
+           <p>&copy; 2025 Static Equipment Inspector Engineer. All rights reserved.</p>
+       </div>
+   </footer>
+</body>
+</html>
