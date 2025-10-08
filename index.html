@@ -1,348 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Portfolio | Senior Static Equipment Inspection Engineer</title>
-   <link rel="stylesheet" href="styles.css">
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Integrity & Inspection Portal</title>
+    <style>
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #34495e;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Homepage Styles */
+        .homepage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #bdc3c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-weight: bold;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        /* Sub-page Styles */
+        .subpage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .sub-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #3498db;
+        }
+
+        .sub-card h4 {
+            color: #2980b9;
+            margin-bottom: 0.75rem;
+        }
+
+        .sub-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: #3498db;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        /* About Me Page */
+        .about-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-     <div style="border: 10px solid #3498db; border-radius: 20px; padding: 20px; background-color: #f1f1f1; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); max-width: 1000px; margin: 50px auto; text-align: justify; font-family: Arial, sans-serif; font-size: 18px; color: #333;">
-   <header>
-       <div class="container">
-           <h1>Senior Static Equipment Inspection Engineer</h1>
-           <p>Expert in Inspection and Maintenance of Static Equipment</p>
-       </div>
-   </header>
- 
-   <section id="about">
-       <div class="container">
-           <h2>About Me</h2>
-           <p>I am a Senior Static Equipment Inspection Engineer with extensive experience in the oil, gas, and chemical industries. My expertise includes inspection, maintenance, risk assessment, and ensuring compliance with API, ASME, and Shell standards.</p>
-       </div>
-   </section>
- 
-   <section id="skills">
-       <div class="container">
-           <h2>Skills and Competencies</h2>
-           <ul>
-               <li>Inspection of Static Equipment (API 510, API 570, API 653)</li>
-               <li>Non-Destructive Testing (UT, MT, PT, PAUT, TOFD)</li>
-               <li>Fitness-for-Service Evaluation (API 579)</li>
-               <li>Risk-Based Inspection Planning (API 580, API 581)</li>
-               <li>Equipment Integrity Management (PCMS, w-IMS)</li>
-               <li>Welding and Material Control (API 577, API 578)</li>
-               <li>Safety Assurance (HSE, PTW, ALARP)</li>
-           </ul>
-       </div>
-   </section>
- 
-   <section id="experience">
-       <div class="container">
-           <h2>Work Experience</h2>
-           <div class="job">
-               <h3>Senior Inspection Engineer</h3>
-               <p><strong>Company:</strong> <a href="https://www.sakhalinenergy.ru/en/"> Sakhalin Energy - Shell joint venture</a></p>
-               <p><strong>Period:</strong> May 2019 - present time</p>
-               <p><strong>Responsibilities:</strong> Conducting inspections, developing RBI plans, managing equipment integrity, participating in maintenance projects.</p>
-           </div>
-           <div class="job">
-               <h3>Non-Destructive Testing Engineer</h3>
-               <p><strong>Company:</strong> <a href="https://www.gazprom.com/"> PJSC Gazprom</a></p>
-               <p><strong>Period:</strong> August 2008 - May 2019</p>
-               <p><strong>Responsibilities:</strong> Performing NDT, analyzing results, preparing reports.</p>
-           </div>
-       </div>
-   </section>
- 
-   <section id="certifications">
-       <div class="container">
-           <h2>Trainings and education</h2>
-           <ul>
-               <li>API 510 — Pressure Vessel Inspector</li>
-               <li>API 570 — Piping Inspector</li>
-               <li>API 653 — Tank Inspector</li>
-               <li>ASME IX — Welding</li>
-               <li>HUET, CA-EBS — Offshore Safety</li>
-               <li>2001-2006 - Surgut State University - MS in Engineering</li>
-               <li>2006-2008 - Moscow State University - MS in Management</li>
-               <li>2018 - European School of Management and Technology, Berlin - Young Leaders Program</li>
-           </ul>
-       </div>
-   </section>
- 
-   <section id="contact">
-       <div class="container">
-           <h2>Contact</h2>
-           <p><strong>Email:</strong> cbms83@yandex.ru</p>
-           <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vyacheslav-okhotnikov-99a25a58"> My LinkedIn Profile</a></p>
-       </div>
-   </section>
+    <header>
+        <div class="logo">IntegrityPortal</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-target="aim">Asset Integrity Management</a></li>
+                <li><a href="#" class="nav-link" data-target="static-equipment">Static Equipment</a></li>
+                <li><a href="#" class="nav-link" data-target="digital">Digital Transformation</a></li>
+                <li><a href="#" class="nav-link" data-target="about">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Portfolio: Expert in Equipment Integrity Management and Non-Destructive Testing</h1>
+    <main>
+        <!-- Homepage -->
+        <section id="home" class="page active">
+            <h1>Welcome to the Asset Integrity & Inspection Portal</h1>
+            <p>Your comprehensive resource for managing asset integrity, inspection methodologies, and digital innovation in industrial operations.</p>
+            <div class="homepage-grid">
+                <div class="card" data-target="aim">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/random/600x400/?industrial,safety');"></div>
+                    <div class="card-content">
+                        <h3>Asset Integrity Management</h3>
+                        <p>Comprehensive strategies and methodologies to ensure the ongoing integrity of assets throughout their lifecycle.</p>
+                    </div>
+                </div>
+                <div class="card" data-target="static-equipment">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/random/600x400/?pipeline,industry');"></div>
+                    <div class="card-content">
+                        <h3>Static Equipment</h3>
+                        <p>Focused inspection and maintenance guides for pressure vessels, heat exchangers, tanks, and piping systems.</p>
+                    </div>
+                </div>
+                <div class="card" data-target="digital">
+                    <div class="card-img" style="background-image: url('https://source.unsplash.com/random/600x400/?technology,digital');"></div>
+                    <div class="card-content">
+                        <h3>Digital Transformation</h3>
+                        <p>Leveraging AI, IoT, robotics, and advanced data analytics to revolutionize inspection and integrity management.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-color: #e67e22; color: white;">Turnaround Inspection</div>
+                    <div class="card-content">
+                        <h3>Turnaround Inspection</h3>
+                        <p>Planning and execution of inspection activities during plant shutdowns to maximize reliability and minimize downtime.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-color: #9b59b6; color: white;">Lessons Learned</div>
+                    <div class="card-content">
+                        <h3>Lessons Learned</h3>
+                        <p>A repository of case studies and insights from past failures and successes in asset integrity management.</p>
+                    </div>
+                </div>
+                <div class="card" data-target="about">
+                    <div class="card-img" style="background-color: #1abc9c; color: white;">About Me</div>
+                    <div class="card-content">
+                        <h3>About Me</h3>
+                        <p>Learn more about the author and their expertise in the field of asset integrity and inspection engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Introduction</h2>
-        <p>As an expert in Non-Destructive Testing (NDT) and Equipment Integrity Management, I possess extensive knowledge and experience in various fields, including welding, pressure vessels, boilers, tanks, heat exchangers, and pipelines. My expertise covers multiple aspects such as flange management, flexible hoses, pressure relief devices, check valves, and rupture discs. I also specialize in Risk-Based Inspection (RBI) and the application of various standards such as API and ASME.</p>
-    </div>
+        <!-- Asset Integrity Management Page -->
+        <section id="aim" class="page">
+            <div class="back-button">&larr; Back to Home</div>
+            <h1>Asset Integrity Management (AIM)</h1>
+            <p>A systematic, holistic approach to ensure that assets are designed, operated, and maintained to perform their required function effectively and safely throughout their lifecycle.</p>
+            <div class="subpage-grid">
+                <div class="sub-card">
+                    <h4>Corrosion Loops</h4>
+                    <p>Diagrams that group process equipment with similar corrosion mechanisms. Used to streamline inspection planning and monitoring. <em>Image: A schematic diagram showing piping and equipment color-coded by corrosion mechanism.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Failure Modes</h4>
+                    <p>Identification and analysis of the ways in which equipment can fail (e.g., thinning, cracking, fatigue). The foundation of Risk-Based Inspection (RBI). <em>Image: A chart listing common failure modes for pressure equipment with icons.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Integrity Operating Windows (IOWs)</h4>
+                    <p>Established limits for process variables (like pressure, temperature, chemistry) that must be controlled to maintain asset integrity. <em>Image: A dashboard screenshot showing process parameters with green/yellow/red operational limits.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Risk Based Inspection (RBI)</h4>
+                    <p>A methodology that uses risk as a basis for prioritizing and managing inspection programs, focusing resources on the highest-risk assets. <em>Image: A risk matrix plot showing equipment items ranked by probability and consequence of failure.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Manage Threats and Opportunities</h4>
+                    <p>Proactive processes to identify and mitigate potential threats to integrity while capitalizing on opportunities to improve performance and extend life. <em>Image: A flowchart illustrating the threat management process from identification to resolution.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Management of Change (MOC)</h4>
+                    <p>A formal system to review and approve any changes to equipment, processes, or materials to ensure no new risks are introduced. <em>Image: A document or form template for a Management of Change request.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Permit to Work System</h4>
+                    <p>A core safety procedure to control high-risk work activities, ensuring all hazards are identified and precautions are in place before work begins. <em>Image: A photo of an engineer reviewing a paper-based or digital permit at a job site.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Asset Integrity and Process Safety</h4>
+                    <p>The direct link between mechanical integrity of equipment and the prevention of catastrophic process safety events. <em>Image: An overlapping Venn diagram showing Asset Integrity, Process Safety, and Operational Excellence.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>QA/QC</h4>
+                    <p>Quality Assurance and Quality Control processes applied during fabrication, repair, and installation to ensure materials and workmanship meet specifications. <em>Image: A welder being inspected by a QC inspector using measurement tools.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Maintenance and Integrity Execution</h4>
+                    <p>The practical planning and execution of inspection, maintenance, and repair activities to sustain asset reliability and availability. <em>Image: A team of technicians executing a planned maintenance task on a large pump or valve.</em></p>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Qualifications and Standards</h2>
-        <p>I am trained in accordance with a range of API standards, including 510, 520, 570, 571, 574, 576, 579, 580, 581, 598, and 653, as well as ASME B31.3, 16.5, and BPVC V, VIII, IX. These qualifications enable me to conduct comprehensive inspections and ensure compliance with safety and quality requirements in the oil and gas, chemical, and energy industries.</p>
-    </div>
+        <!-- Static Equipment Page -->
+        <section id="static-equipment" class="page">
+            <div class="back-button">&larr; Back to Home</div>
+            <h1>Static Equipment Inspection</h1>
+            <p>Detailed inspection methodologies and best practices for non-rotating plant equipment to ensure their continued safe and reliable operation.</p>
+            <div class="subpage-grid">
+                <div class="sub-card">
+                    <h4>Pressure Vessels Inspection</h4>
+                    <p>Internal and external inspection of drums, columns, and reactors for corrosion, erosion, and cracking. Utilizes NDT methods like UT thickness testing and MT/PT. <em>Image: An inspector performing an internal examination of a large vessel with a flashlight.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Flare System Inspection</h4>
+                    <p>Inspection of flare tips, stacks, knock-out drums, and piping for thermal degradation, corrosion, and structural integrity. Often requires specialized access. <em>Image: A drone view of a tall flare stack, with an inset of a corroded flare tip.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Heat Exchangers Inspection</h4>
+                    <p>Tube bundle pulling, tube inspection (ECT, IRIS), shell and channel examination. Critical for maintaining heat transfer efficiency and preventing leaks. <em>Image: A pulled tube bundle laid out on racks, with an inspector checking tube ends.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Boilers and WHRU Inspection</h4>
+                    <p>Inspection of furnaces, tubes, refractory, and headers in boilers and Waste Heat Recovery Units. Focus on high-temperature damage mechanisms. <em>Image: An internal view of a boiler showing tube banks and refractory lining.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Piping Inspection</h4>
+                    <p>Circuitization and baseline inspection of process piping, focusing on corrosion under insulation (CUI), erosion-corrosion, and fatigue. <em>Image: An inspector using an ultrasonic thickness gauge on a pipe, possibly with insulation removed.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Tanks Inspection</h4>
+                    <p>Above-ground storage tank (AST) inspection including floor scanning, shell courses, roof, and foundation assessment per API 653. <em>Image: An inspector on a raft performing ultrasonic testing on a tank floor.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Valves Inspections</h4>
+                    <p>In-service and bench inspection of block valves, control valves, and relief devices (PSVs) for proper operation, leakage, and internal damage. <em>Image: A maintenance technician testing a safety relief valve on a calibration bench.</em></p>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Integrity and Corrosion Management</h2>
-        <p>My experience in equipment integrity management includes the use of methods such as Shell-RBI, AMS, and w-IMS, as well as the development and implementation of a Corrosion Management Framework. I have worked with various components and equipment, including critical elements, inspection schedules, operation histories, and risk matrices. My work also covers consequence analysis, confidence and risk mitigation, as well as life cycle management and maintenance planning.</p>
-    </div>
+        <!-- Digital Transformation Page -->
+        <section id="digital" class="page">
+            <div class="back-button">&larr; Back to Home</div>
+            <h1>Digital Transformation in Inspection</h1>
+            <p>Embracing cutting-edge technologies to make inspection processes smarter, safer, more efficient, and more predictive.</p>
+            <div class="subpage-grid">
+                <div class="sub-card">
+                    <h4>AI for Inspection</h4>
+                    <p>Machine learning algorithms analyze vast datasets (images, sensor data) to automatically detect anomalies, predict corrosion rates, and prioritize findings. <em>Image: A software interface showing an AI-highlighted indication on a radiograph or corrosion map.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Inspection using AR</h4>
+                    <p>Augmented Reality glasses overlay inspection history, P&IDs, and thickness data onto the engineer's field of view, providing real-time contextual information. <em>Image: An engineer wearing AR glasses looking at a vessel, with digital data overlaid in the image.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Robotic and Drone Inspection</h4>
+                    <p>Deploying crawlers, drones, and submersibles for access-confined or hazardous areas. Captures high-resolution visuals and sensor data without human entry. <em>Image: A drone flying near a tall column or a crawler robot inside a confined space.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>Advanced NDT and Digital Integration</h4>
+                    <p>Phased Array UT, Digital Radiography (DR), and Laser Scanning produce rich digital data that integrates directly with Digital Twin models. <em>Image: A screen showing a 3D point cloud model of a pipe rack generated from a laser scan.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>IoT and Continuous Monitoring</h4>
+                    <p>Permanently installed wireless sensors (UT, AE, corrosion probes) provide real-time integrity data, enabling a shift from periodic to continuous monitoring. <em>Image: A diagram showing wireless sensors on equipment transmitting data to a cloud-based dashboard.</em></p>
+                </div>
+                <div class="sub-card">
+                    <h4>AI-Driven and Dynamic RBI</h4>
+                    <p>RBI programs that update risk rankings in real-time based on live operational data, inspection results, and AI-predicted degradation. <em>Image: A dynamic dashboard where asset risk scores change color based on real-time feed from process and integrity data.</em></p>
+                </div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h2>Technical Skills and Methods</h2>
-        <p>I have extensive knowledge in corrosion, including CUI, cracking, weld defects, mechanical damage, leaks, embrittlement, and fatigue. My skills in non-destructive testing include visual inspection (VT), ultrasonic testing (UT/PAUT/TOFD/LRUT), electromagnetic testing (EMAT), radiographic testing (RT/DRT/RTR), and many others. I am also proficient in modern technologies such as remote experts, augmented and virtual reality, digital twins, and machine learning.</p>
-    </div>
+        <!-- About Me Page -->
+        <section id="about" class="page">
+            <div class="back-button">&larr; Back to Home</div>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>Hello! I am a seasoned Asset Integrity and Inspection Engineer with over 15 years of experience in the oil & gas, petrochemical, and power generation industries.</p>
+                <p>My passion lies in ensuring the safe, reliable, and efficient operation of industrial assets through robust engineering practices, data-driven decision making, and the strategic adoption of digital technologies.</p>
+                <p>I have extensive hands-on experience with Risk-Based Inspection (RBI) methodologies, failure analysis, fitness-for-service assessments, and the development of integrity management programs for static equipment.</p>
+                <p>This website serves as a knowledge hub, sharing lessons learned, technical guides, and insights into the future of asset integrity management. I believe that by sharing knowledge, we can collectively raise the bar for safety and reliability across our industry.</p>
+                <p><strong>Areas of Expertise:</strong> Asset Integrity Management, Risk-Based Inspection (RBI), Non-Destructive Testing (NDT), Fitness-for-Service (FFS), Mechanical Design, Corrosion Control, Digital Transformation, and Process Safety.</p>
+            </div>
+        </section>
+    </main>
 
-    <div class="section">
-        <h2>Equipment and Materials</h2>
-        <p>I have worked with various materials, such as carbon steel, stainless steel, duplex steel, galvanized steel, 6Mo, titanium, and HDPE. My experience includes the application of analysis methods such as PMI/XRF, hardness, tensile, and impact tests, as well as the use of analysis software such as ANSYS and Solidworks.</p>
-    </div>
+    <script>
+        // Simple JavaScript for page navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            // Cards on the homepage
+            const homeCards = document.querySelectorAll('.card[data-target]');
+            // Back buttons
+            const backButtons = document.querySelectorAll('.back-button');
+            // All pages
+            const allPages = document.querySelectorAll('.page');
 
-    <div class="section">
-        <h2>Projects and Achievements</h2>
-        <p>My experience covers both onshore and offshore production facilities, including booster stations, LNG terminals, and oil terminals, as well as pipelines and gas distribution networks. I have successfully implemented projects related to maintenance, repair, and modifications, including the updating of drawings, isometric diagrams, and P&IDs.</p>
-    </div>
+            // Function to show a specific page and hide others
+            function showPage(pageId) {
+                allPages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(pageId).classList.add('active');
 
-    <div class="section">
-        <h2>Innovation and Sustainability</h2>
-        <p>I have also actively improved my qualification in renewable energy projects, such as wind turbines, solar panels, and energy storage technologies. My experience in digitalization and process automation allows me to use modern technologies to enhance efficiency and safety.</p>
-    </div>
+                // Update active state in navigation
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-target') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
 
-    <div class="section">
-        <h2>Conclusion</h2>
-        <p>My portfolio demonstrates a wide range of skills and experience in non-destructive testing, equipment integrity management, and corrosion. I am committed to continuous development and the application of advanced technologies to ensure safety and reliability in the oil and gas, chemical, and energy industries.</p>
-    </div>
+            // Add event listeners to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('data-target');
+                    showPage(targetPage);
+                });
+            });
 
-       <h1>General Inspection and Maintenance Processes</h1>
-    <ol>
-        <li>
-            <strong>Visual Inspections (VT):</strong>
-            <ul>
-                <li>Conducted on all equipment to identify surface defects, corrosion, and mechanical damage.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Non-Destructive Testing (NDT):</strong>
-            <ul>
-                <li><strong>Ultrasonic Testing (UT):</strong> Used to measure wall thickness and detect internal flaws.</li>
-                <li><strong>Magnetic Particle Testing (MT):</strong> Applied to detect surface and near-surface cracks.</li>
-                <li><strong>Radiographic Testing (RT):</strong> Used for internal defect detection in welds and components.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Borescope Inspections:</strong>
-            <ul>
-                <li>Performed to inspect internal components of vessels, heat exchangers, tanks, and rotating equipment.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Hydrostatic and Pneumatic Testing:</strong>
-            <ul>
-                <li>Conducted to verify the integrity of vessels, heat exchangers, tanks, piping system, and valves.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Composite Repairs:</strong>
-            <ul>
-                <li>Applied to repair localized corrosion or damage on vessels, tanks, and piping system.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Welding Repairs:</strong>
-            <ul>
-                <li>Performed to address cracks, corrosion, or mechanical damage in vessels, piping system, and rotating equipment.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Corrosion Under Insulation (CUI) Monitoring:</strong>
-            <ul>
-                <li>Conducted on vessels and piping systems to detect hidden corrosion.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Insulation Replacement:</strong>
-            <ul>
-                <li>Replacing GRP insulation with metal or foam glass on vessels, tanks, and piping systems</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Leak Detection:</strong>
-            <ul>
-                <li>Using IR cameras and acoustic methods to identify leaks in piping systems and rotating equipment.</li>
-            </ul>
-        </li>
-    </ol>
+            // Add event listeners to homepage cards
+            homeCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const targetPage = this.getAttribute('data-target');
+                    showPage(targetPage);
+                });
+            });
 
-       <h1>Equipment-Specific Processes</h1>
-
-    <h2>Vessels</h2>
-    <ol>
-        <li>
-            <strong>Internal Component Inspections:</strong>
-            <ul>
-                <li>Cyclones, swirlers, and other internals inspected for wear, corrosion, and blockages.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Flange Testing:</strong>
-            <ul>
-                <li>Hydrostatic testing of flanges to ensure sealing integrity.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Internal Coating Restoration:</strong>
-            <ul>
-                <li>Restoring protective coatings in vessels.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Heat Exchangers</h2>
-    <ol>
-        <li>
-            <strong>Tube Bundle Cleaning:</strong>
-            <ul>
-                <li>Removing fouling and deposits from tube bundles.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Tube Plugging:</strong>
-            <ul>
-                <li>Plugging leaking or damaged tubes to maintain performance.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Preservation:</strong>
-            <ul>
-                <li>Applying preservation methods during shutdowns.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Tanks</h2>
-    <ol>
-        <li>
-            <strong>Geodetic Measurements:</strong>
-            <ul>
-                <li>Monitoring tank settlement and deformation.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Robotic Inspections:</strong>
-            <ul>
-                <li>Using Stingray robots for tank bottom inspections.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Advanced NDT Methods:</strong>
-            <ul>
-                <li>Higher Order Modes Cluster (HOMC) and Pulsed Eddy Current (PEC) for corrosion mapping.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Acoustic Emission Testing (TankPAC):</strong>
-            <ul>
-                <li>Detecting active corrosion and leaks.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Internal Coating Restoration:</strong>
-            <ul>
-                <li>Restoring coatings in tanks.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Piping System</h2>
-    <ol>
-        <li>
-            <strong>Erosion Monitoring:</strong>
-            <ul>
-                <li>Inspecting for erosion in high-velocity sections.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Dead Legs Inspections:</strong>
-            <ul>
-                <li>Checking for corrosion in low-flow or stagnant areas.</li>
-            </ul>
-        </li>
-         <li>
-            <strong>Injection and mixing points Inspections:</strong>
-            <ul>
-                <li>Inspecting for damages and corrosion.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Flare System</h2>
-    <ol>
-        <li>
-            <strong>UAV Inspections:</strong>
-            <ul>
-                <li>Using drones to inspect flare tips and structural integrity.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Flare Tip Replacement:</strong>
-            <ul>
-                <li>Replacing damaged or worn flare tips.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Rotating Equipment</h2>
-    <ol>
-        <li>
-            <strong>Root Cause Analysis (RCA):</strong>
-            <ul>
-                <li>Investigating failures in pumps, compressors, and motors.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Motor Inspections:</strong>
-            <ul>
-                <li>Inspecting motor windings, bearings, and alignment.</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Valves and Pressure Relief Devices (PRDs)</h2>
-    <ol>
-        <li>
-            <strong>Functional Testing:</strong>
-            <ul>
-                <li>Testing valves and PRDs for proper operation.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Rupture Disc Replacement:</strong>
-            <ul>
-                <li>Replacing worn or damaged rupture discs.</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Non-return, check valves inspection:</strong>
-            <ul>
-                <li>DRT and visual inspection for mechanical damages and corrosion.</li>
-            </ul>
-    </ol>
-
-   
-   <footer>
-       <div class="container">
-           <p>&copy; 2025 Senior Static Equipment Inspector Engineer. All rights reserved.</p>
-       </div>
-   </footer>
-        </div>
+            // Add event listeners to back buttons
+            backButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    showPage('home');
+                });
+            });
+        });
+    </script>
 </body>
- </html>
+</html>
